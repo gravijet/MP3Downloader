@@ -1,0 +1,8 @@
+[Unit]
+Description=Update yt-dlp / spotDL for the Playlist Downloader
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/mp3downloader/deploy/update-extractors.sh
