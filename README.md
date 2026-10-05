@@ -13,4 +13,4 @@ python3 -m venv .venv
 node --check app/static/app.js
 ```
 
-The conversion tests require ffmpeg. Configure authentication and job storage locally. Only download content you have permission to use.
+Requires ffmpeg. Set `YTDLWEB_DATA_DIR` to a writable directory and configure authentication through environment variables. Start the API with `.venv/bin/uvicorn app.main:app`. Browser sessions require HTTPS because their cookies use the `Secure` flag.
